@@ -1,0 +1,69 @@
+/* this stylesheet deals with layout by float */
+.row::before, 
+.row::after {
+    content:"";
+    display: table;
+    clear:both;
+}
+[class*='col'] {
+  margin: 1%;
+  width: 98%;
+}
+
+/* medium devices */
+@media (min-width: 550px) { 
+  [class*='col'] {
+    float: left;
+  }
+  .col-1-nest,
+  .col-2 {
+    width: 48%;
+  }
+  .col-1,
+  .col-3,
+  .col-4 {
+    width: 98%;
+  }
+  .col-1-nest {
+	margin: 1%;
+	}
+	.col-push-1,
+	.col-pull-3 {
+		left: 0;
+		width: 98%;
+		position: static;
+	}
+}
+/* Large devices */
+@media (min-width: 850px) { 
+  .col-1,
+  .col-1-nest,
+  .col-pull-3 {
+    width: 24%;
+  }
+  .col-2 {
+    width: 48%;
+  }
+  .col-3,
+  .col-push-1 {
+    width: 72%;
+  }
+  .col-4 {
+    width: 98%;
+  }
+  .col-1-nest {
+  	margin-right: 1%;
+  	margin-left: 0;
+  }
+	/* rearranging the columns */
+	[class*="col-"] {
+		position: relative;
+	}
+	.col-push-1 {
+		left: 26%;
+	}
+	.col-pull-3 {
+		left: -74%;
+	}
+
+}

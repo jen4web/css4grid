@@ -1,0 +1,71 @@
+/* this stylesheet deals with layout by flexbox */
+.row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 1%;
+}
+.row .row {
+	margin: 1% 0 0 0;
+}
+.rowreverse {
+	flex-flow: row-reverse wrap;
+}
+.colreverse {
+  flex-flow: column-reverse wrap;
+}
+[class*='col'] {
+  flex: 0 0 98%; /* grow, shrink, basis */
+}
+section.col-push-1,
+section aside {
+	margin-bottom: 1%;
+}
+/* medium devices */
+@media (min-width: 550px) { 
+	.col-1-nest,
+	.col-2 {
+		flex: 0 0 48%; 
+	}
+	.col-1,
+	.col-3,
+	.col-4 {
+		flex: 0 0 98%;
+	}
+	.col-push-1,
+	.col-pull-3 {
+		flex: 0 0 98%;
+	}
+	.col-1-nest {
+		margin-right: 1%;
+	}
+}
+/* Large devices */
+@media (min-width: 850px) { 
+	.col-1,
+	.col-1-nest,
+	.col-pull-3 {
+		flex: 0 0 24%;
+	}
+	.col-2 {
+		flex: 0 0 48%;
+	}
+	.col-3,
+	.col-push-1 {
+		flex: 0 0 72%;
+	}
+	.col-4 {
+		flex: 0 0 98%;
+	}
+	.col-push-1 {
+		margin-left: 1%;
+	}
+	/* rearranging the columns */
+	.col-push-1 {
+		order: 2;
+	}
+	.col-pull-3 {
+		order: 1;
+	}
+}
