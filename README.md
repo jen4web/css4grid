@@ -1,8 +1,6 @@
 # css4grid
 Files comparing CSS4 Grid with Flexbox and float-based layouts.
 
-start.html may be paired with either float.css or flexbox.css. The look of the page is similar with minor differences in spacing.
+Each HTML file is paired with a CSS file of a similar name.
 
-start-grid.html is paired with grid.css. The HTML is different as no "row" feature is required, as it is with float or flexbox-based systems.
-
-basic.css contains non-layout CSS: colors, padding, fonts, etc. This also contains a border-box declaration for ease of working with layouts.
+basic.css contains non-layout CSS: colors, padding, fonts, etc. It is used with all 3 methods of layout. This also contains a border-box declaration for ease of working with layouts.
